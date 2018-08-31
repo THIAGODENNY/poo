@@ -12,7 +12,5 @@ public class UsaFuncionario {
 		f.salario = 1000;
 		f.mostrar();		
 	}
-
-
 }
 
