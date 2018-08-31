@@ -1,0 +1,22 @@
+import com.sun.javaws.exceptions.InvalidArgumentException;
+
+public class M {
+
+	public static String converter(int n) {
+		String[] diaDaSemana = {
+				"Domingo" , 
+				"Segunda" , 
+				"Terça" , 
+				"Quarta" , 
+				"Quinta", 
+				"Sexta" , 
+				"Sábado"
+				};
+		
+		if(n < 1 || n >7) {
+			throw new InvalidArgumentException();
+		}
+		
+		}
+	}
+}

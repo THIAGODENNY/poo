@@ -1,0 +1,15 @@
+import javax.swing.JOptionPane;
+
+public class AppM {
+	public static void main(String[] args) {
+		
+		//teste método converter
+		
+		int	diaSemana = Integer.parseInt(JOptionPane.showInputDialog(
+					"Digite um valor de 1 à 7 (Domingo à Segunda):"));
+		
+			
+		JOptionPane.showMessageDialog(null, M.converter(diaSemana));
+		
+	}
+}

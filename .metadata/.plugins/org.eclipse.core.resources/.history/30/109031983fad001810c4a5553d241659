@@ -1,0 +1,25 @@
+import javax.management.InvalidAttributeValueException;
+
+import com.sun.javaws.exceptions.InvalidArgumentException;
+
+public class M {
+
+	public static String converter(int n) {
+		String[] diaDaSemana = {
+				"Domingo" , 
+				"Segunda" , 
+				"Terça" , 
+				"Quarta" , 
+				"Quinta", 
+				"Sexta" , 
+				"Sábado"
+				};
+		try {
+			if(n < 1 || n >7)
+				throw new InvalidAttributeValueException();
+			return diaDaSemana[n];
+		}catch (InvalidAttributeValueException e) {
+			return "Erro";
+		}
+	}
+}

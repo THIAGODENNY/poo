@@ -1,0 +1,68 @@
+package lista.exercicios;
+
+import java.text.DecimalFormat;
+
+import javax.swing.JOptionPane;
+
+/*
+ * 2. Faça uma aplicação em Java que peça as 3 notas bimestrais (use JOptionPane) 
+ * e mostre a média. As notas devem ser valores válidos entre 0 e 10.
+ */
+
+public class Exercicio02 {
+	public static void main(String[] args) {
+
+		boolean capturaOk = false;
+		double nota1 = 0;
+		double nota2 = 0;
+		double nota3 = 0;
+
+		do {
+			try {
+				nota1 = Double.parseDouble(JOptionPane.showInputDialog("Digite a nota 1:"));
+				if (nota1 < 0 || nota1 > 10)
+					throw new NumberFormatException();
+				capturaOk = true;
+			} catch (NumberFormatException e) {
+				capturaOk = false;
+				JOptionPane.showMessageDialog(null, "Digite uma nota de 0 a 10");
+			} catch (NullPointerException e) {
+				System.exit(0);
+			}
+		} while (capturaOk == false);
+
+		do {
+			try {
+				nota2 = Double.parseDouble(JOptionPane.showInputDialog("Digite a nota 2:"));
+				if (nota2 < 0 || nota2 > 10)
+					throw new NumberFormatException();
+				capturaOk = true;
+			} catch (NumberFormatException e) {
+				capturaOk = false;
+				JOptionPane.showMessageDialog(null, "Digite uma nota de 0 a 10");
+			} catch (NullPointerException e) {
+				System.exit(0);
+			}
+		} while (capturaOk == false);
+
+		do {
+			try {
+				nota3 = Double.parseDouble(JOptionPane.showInputDialog("Digite a nota 3:"));
+				if (nota3 < 0 || nota3 > 10)
+					throw new NumberFormatException();
+				capturaOk = true;
+			} catch (NumberFormatException e) {
+				capturaOk = false;
+				JOptionPane.showMessageDialog(null, "Digite uma nota de 0 a 10");
+			} catch (NullPointerException e) {
+				System.exit(0);
+			}
+		} while (capturaOk == false);
+
+		DecimalFormat numberFormat = new DecimalFormat("0.00");
+		double media = (nota1 + nota2 + nota3) / 3;
+
+		JOptionPane.showMessageDialog(null,"Sua média é: " + numberFormat.format(media));
+
+	}
+}

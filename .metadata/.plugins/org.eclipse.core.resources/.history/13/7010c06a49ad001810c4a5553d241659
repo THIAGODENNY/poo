@@ -1,0 +1,76 @@
+import javax.swing.JOptionPane;
+
+public class AppM {
+	public static void main(String[] args) {
+
+		// teste método converter
+
+		String opcao = JOptionPane.showInputDialog("1 - Testar método converter.\n" 
+													+	"2 - Testar método gerar.\n"
+													+ 	"3 - Testar método comparar. \n"
+													+ 	"4 - Testar método contar. \n"
+													+ 	"5 - Testar método gerarSenha.");
+
+		if (opcao.equals("1")) {
+			int diaSemana = 0;
+			try {
+				String diaSemanaString = JOptionPane.showInputDialog("Digite um valor de 1 à 7 (Domingo à Segunda):");
+				if (diaSemanaString == null) {
+					throw new NullPointerException();
+				}
+
+				diaSemana = Integer.parseInt(diaSemanaString);
+
+			} catch (NumberFormatException e) {
+				diaSemana = 0;
+			} catch (NullPointerException e) {
+				System.exit(0);
+			}
+
+			JOptionPane.showMessageDialog(null, M.converter(diaSemana));
+		}
+
+		//
+		if (opcao.equals("2")) {
+			Integer numerosRandomicos = 0;
+			try {
+				String numerosRandomicosString = JOptionPane
+						.showInputDialog("Digite a quantidade " + "desejada de números Randomicos:");
+				if (numerosRandomicosString == null) {
+					throw new NullPointerException();
+				}
+				numerosRandomicos = Integer.parseInt(numerosRandomicosString);
+				JOptionPane.showMessageDialog(null, M.gerar(numerosRandomicos));
+
+			} catch (NumberFormatException e) {
+				JOptionPane.showMessageDialog(null, "Valor Inválido!");
+			} catch (NullPointerException e) {
+				System.exit(0);
+			}
+		}
+		
+		if (opcao.equals("3")) {
+			Integer[] numerosInteiros = new Integer[3];
+			for (int i = 0; i < numerosInteiros.length; i++) {
+				try {
+					String numerosInteirosString = JOptionPane
+							.showInputDialog("Digite o número " + (i + 1) + " para comparação:sssss");
+					if (numerosInteirosString == null) {
+						throw new NullPointerException();
+					}
+					numerosInteiros[i] = Integer.parseInt(numerosInteirosString);
+				} catch (NumberFormatException e) {
+					JOptionPane.showMessageDialog(null, "Valor Inválido!");
+					i--;
+				} catch (NullPointerException e) {
+					System.exit(0);
+				}
+			}
+			
+			JOptionPane.showMessageDialog(null, "O maior número é: " 
+					+ M.comparar(numerosInteiros[0], numerosInteiros[1], numerosInteiros[2]));
+			
+		}
+
+	}
+}

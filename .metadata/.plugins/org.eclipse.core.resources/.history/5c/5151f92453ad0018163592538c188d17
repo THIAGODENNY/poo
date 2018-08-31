@@ -1,0 +1,43 @@
+/*
+ * Usando a estrutura try-catch, elabore uma aplicação em Java que receba um valor
+ * (use JOptionPane) e informe se esse valor é um número inteiro (ou não é inteiro).
+ */
+
+package lista.exercicios;
+
+import javax.swing.JOptionPane;
+
+public class Exercicio06 {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+
+		boolean capturaOk = false;
+		double numero = 0;
+
+		do {
+			try {
+				numero = Double.parseDouble(JOptionPane.showInputDialog("Digite um número:"));
+				if (numero < 0)
+					throw new NumberFormatException();
+				capturaOk = true;
+			} catch (NumberFormatException e) {
+				capturaOk = false;
+				JOptionPane.showMessageDialog(null, "Valor inválido");
+			} catch (NullPointerException e) {
+				System.exit(0);
+			}
+		} while (capturaOk == false);
+		
+		int numeroInteiro = (int)numero;
+		
+		boolean numeroEhInteiro = (numero - numeroInteiro) == 0;
+		
+		if(numeroEhInteiro)
+			JOptionPane.showMessageDialog(null, "Numero Inteiro");
+		else
+			JOptionPane.showMessageDialog(null, "Numero não Inteiro");
+	}
+}

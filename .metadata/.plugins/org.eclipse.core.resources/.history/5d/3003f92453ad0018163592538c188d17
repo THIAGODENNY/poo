@@ -1,0 +1,53 @@
+package lista.exercicios;
+
+import java.text.DecimalFormat;
+
+import javax.swing.JOptionPane;
+
+/*
+ * 1. Faça uma aplicação em Java que peça dois números (use JOptionPane) 
+ * e imprima em tela o resultado das quatro operações matemáticas (+, -, *, /) sobre esses dois números.
+ */
+
+public class Exercicio01 {
+
+	public static void main(String[] args) {
+
+		boolean capturaOk = false;
+		double numero1 = 0;
+		double numero2 = 0;
+
+		do {
+			try {
+				numero1 = Double.parseDouble(JOptionPane.showInputDialog("Digite o primeiro número:"));
+				capturaOk = true;
+			} catch (NumberFormatException e) {
+				capturaOk = false;
+				JOptionPane.showMessageDialog(null, "Digite um número");
+			} catch (NullPointerException e) {
+				System.exit(0);
+			}
+		} while (capturaOk == false);
+
+		do {
+			try {
+				numero2 = Double.parseDouble(JOptionPane.showInputDialog("Digite o segundo número:"));
+				capturaOk = true;
+			} catch (NumberFormatException e) {
+				capturaOk = false;
+				JOptionPane.showMessageDialog(null, "Digite um número");
+			} catch (NullPointerException e) {
+				System.exit(0);
+			}
+		} while (capturaOk == false);
+
+		DecimalFormat numberFormat = new DecimalFormat("0.00");
+		
+		JOptionPane.showMessageDialog(null, numero1 + " + " + numero2 + " = " + numberFormat.format(numero1 + numero2) + "\n" +
+				numero1 + " - " + numero2 + " = " + numberFormat.format(numero1 - numero2) + "\n" + 
+				numero1 + " * " + numero2 + " = " + numberFormat.format(numero1 * numero2) + "\n" +
+				(numero2 == 0 ? "Divisão por 0" : numero1 + " / " + numero2 + " = " + numberFormat.format((numero1 / numero2))));
+
+
+	}
+}

@@ -1,0 +1,46 @@
+/*Faça uma aplicação em Java que funcione como um caixa de supermercado que
+ *acumula valores de produtos. Deve conter um laço de repetição que recebe o valor
+ *do produto (use JOptionPane) e o acumula enquanto o usuário fornecer um valor
+ *maior que zero. Dessa forma, ao receber um valor <0 deve ser apresentado em tela
+ *o valor total acumulado.
+ */
+
+package lista.exercicios;
+
+import java.text.DecimalFormat;
+
+import javax.swing.JOptionPane;
+
+public class Exercicio08 {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		
+		DecimalFormat numberFormat = new DecimalFormat("0.00");
+		double valorTotal = 0;
+		double valor = 0;		
+		boolean continuaCaptura = true;
+		
+		
+		do {
+			try {
+				valor = Double.parseDouble(JOptionPane.showInputDialog("Digite um valor:" + " - Subtotal: R$" + numberFormat.format(valorTotal)));
+				if (valor < 0){
+					continuaCaptura = false;
+					break;
+				}
+				valorTotal += valor;
+			} catch (NumberFormatException e) {
+				JOptionPane.showMessageDialog(null, "Valor inválido");
+			} catch (NullPointerException e) {
+				System.exit(0);
+			}
+		} while (continuaCaptura);
+		
+		JOptionPane.showMessageDialog(null, "Valor total: R$" + numberFormat.format(valorTotal));
+
+	}
+
+}

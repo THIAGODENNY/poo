@@ -1,0 +1,25 @@
+import java.util.Random;
+
+import javax.management.InvalidAttributeValueException;
+
+public class M {
+
+	public static String converter(int n) {
+		String[] diaDaSemana = { "Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado" };
+		try {
+			if (n < 1 || n > 7)
+				throw new InvalidAttributeValueException();
+			return diaDaSemana[n - 1];
+		} catch (InvalidAttributeValueException e) {
+			return "Erro. Valores de 1 a 7";
+		}
+	}
+	
+	public static void gerar(int n) {
+		Random random = new Random();
+		
+		
+		
+		System.out.println(random.nextInt(999));
+	}
+}

@@ -1,0 +1,45 @@
+/*
+ * Faça uma classe que receba o valor do IPTU (use JOptionPane) e calcule o valor do desconto 
+ * para pagamento a vista, sabendo-se que o percentual de desconto é de 5%. Apresente em tela 
+ * o valor original, o valor do desconto e o valor final.
+ */
+
+package lista.exercicios;
+
+import java.text.DecimalFormat;
+
+import javax.swing.JOptionPane;
+
+public class Exercicio05 {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		
+		boolean capturaOk = false;
+		double valorIptu = 0;
+
+		do {
+			try {
+				valorIptu = Double.parseDouble(JOptionPane.showInputDialog("Digite a o valor do IPTU:"));
+				if (valorIptu < 0)
+					throw new NumberFormatException();
+				capturaOk = true;
+			} catch (NumberFormatException e) {
+				capturaOk = false;
+				JOptionPane.showMessageDialog(null, "Valor inválido");
+			} catch (NullPointerException e) {
+				System.exit(0);
+			}
+		} while (capturaOk == false);
+		
+		DecimalFormat numberFormat = new DecimalFormat("0.00");
+		double valorDesconto = (valorIptu * (5.00/100.00));
+		double valorComDesconto = valorIptu - valorDesconto;
+		
+		JOptionPane.showMessageDialog(null,"Valor do iptu: R$" + numberFormat.format(valorIptu) + "\n" + 
+											"Desconto 5%: R$" + numberFormat.format(valorDesconto) + "\n" +
+											"Valor com Desconto: R$" + numberFormat.format(valorComDesconto));	
+	}
+}
