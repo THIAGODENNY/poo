@@ -6,6 +6,10 @@ public class UsaPessoa {
 		Pessoa pessoa = new Pessoa();
 		System.out.println(pessoa.getClass());
 		System.out.println(pessoa.hashCode());
+		
+		System.out.println(pessoa.toString());
+		
+		
 	}
 
 }
