@@ -10,7 +10,7 @@ public class UsaFuncionario {
 		f.rg = "123";
 		f.cpf = "123";
 		f.salario = 1000;
-		f.mostrar();		
+		f.mostrar();
 	}
 }
 
