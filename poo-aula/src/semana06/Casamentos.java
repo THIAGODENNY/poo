@@ -18,7 +18,7 @@ public class Casamentos {
 		p2.conjuge = p1;
 		
 		p3.codigo = 3;
-		p3.nome = "Keila";
+		p3.nome = "Kiko";
 		
 		p1.mostrar();
 		System.out.println("------------------");
