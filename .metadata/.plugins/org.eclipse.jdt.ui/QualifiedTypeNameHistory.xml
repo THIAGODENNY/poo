@@ -2,4 +2,7 @@
 <qualifiedTypeNameHistroy>
 <fullyQualifiedTypeName name="java.lang.NullPointerException"/>
 <fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="semana06.Funcionario"/>
+<fullyQualifiedTypeName name="semana06.Editora"/>
+<fullyQualifiedTypeName name="semana06.Livro"/>
 </qualifiedTypeNameHistroy>

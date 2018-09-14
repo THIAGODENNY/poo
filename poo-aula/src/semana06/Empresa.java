@@ -20,6 +20,6 @@ public class Empresa {
 		f2.nome = "Carlos";
 		f2.numCartao = 100;
 		f2.cargo = c;
-		f2.mostrar();
+		f2.mostrar();	
 	}
 }
