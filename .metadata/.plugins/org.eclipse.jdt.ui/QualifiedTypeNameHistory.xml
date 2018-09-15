@@ -5,4 +5,18 @@
 <fullyQualifiedTypeName name="semana06.Funcionario"/>
 <fullyQualifiedTypeName name="semana06.Editora"/>
 <fullyQualifiedTypeName name="semana06.Livro"/>
+<fullyQualifiedTypeName name="semana06.Ar"/>
+<fullyQualifiedTypeName name="semana06.Quarto"/>
+<fullyQualifiedTypeName name="semana06.Sala"/>
+<fullyQualifiedTypeName name="semana06.Casa"/>
+<fullyQualifiedTypeName name="semana06.Interruptor"/>
+<fullyQualifiedTypeName name="semana06.UsaInterruptor"/>
+<fullyQualifiedTypeName name="semana06.UsaInterruptorFlex"/>
+<fullyQualifiedTypeName name="semana06.Lampada"/>
+<fullyQualifiedTypeName name="semana06.InterruptorFlex"/>
+<fullyQualifiedTypeName name="com.sun.org.apache.xalan.internal.xsltc.compiler.sym"/>
+<fullyQualifiedTypeName name="semana06.Fruta"/>
+<fullyQualifiedTypeName name="semana06.Laranja"/>
+<fullyQualifiedTypeName name="semana06.Abacaxi"/>
+<fullyQualifiedTypeName name="semana06.Banana"/>
 </qualifiedTypeNameHistroy>
