@@ -2,7 +2,7 @@ package semana06;
 
 public class Lampada {
 	
-	private boolean status;
+	protected boolean status;
 	
 	public void ligar() {
 		status = true;
