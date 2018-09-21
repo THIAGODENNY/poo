@@ -19,4 +19,21 @@
 <fullyQualifiedTypeName name="semana06.Laranja"/>
 <fullyQualifiedTypeName name="semana06.Abacaxi"/>
 <fullyQualifiedTypeName name="semana06.Banana"/>
+<fullyQualifiedTypeName name="semana07.Motor"/>
+<fullyQualifiedTypeName name="java.lang.Runnable"/>
+<fullyQualifiedTypeName name="java.io.Serializable"/>
+<fullyQualifiedTypeName name="semana07.Automovel"/>
+<fullyQualifiedTypeName name="teste.teste"/>
+<fullyQualifiedTypeName name="javax.swing.JTextField"/>
+<fullyQualifiedTypeName name="javax.swing.JButton"/>
+<fullyQualifiedTypeName name="semana07.Interface01"/>
+<fullyQualifiedTypeName name="semana07.Interface02"/>
+<fullyQualifiedTypeName name="com.sun.codemodel.internal.JLabel"/>
+<fullyQualifiedTypeName name="javax.swing.JLabel"/>
+<fullyQualifiedTypeName name="semana07.MeuFrame"/>
+<fullyQualifiedTypeName name="semana07.Alimentar"/>
+<fullyQualifiedTypeName name="semana07.Passaro"/>
+<fullyQualifiedTypeName name="semana01.UsaExemplo05Usuario"/>
+<fullyQualifiedTypeName name="semana07.Urubu"/>
+<fullyQualifiedTypeName name="semana07.Andorinha"/>
 </qualifiedTypeNameHistroy>
