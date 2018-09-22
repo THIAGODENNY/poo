@@ -36,4 +36,13 @@
 <fullyQualifiedTypeName name="semana01.UsaExemplo05Usuario"/>
 <fullyQualifiedTypeName name="semana07.Urubu"/>
 <fullyQualifiedTypeName name="semana07.Andorinha"/>
+<fullyQualifiedTypeName name="org.omg.CORBA.Object"/>
+<fullyQualifiedTypeName name="javax.swing.JFrame"/>
+<fullyQualifiedTypeName name="java.awt.event.ActionListener"/>
+<fullyQualifiedTypeName name="java.awt.event.TextListener"/>
+<fullyQualifiedTypeName name="java.awt.event.MouseListener"/>
+<fullyQualifiedTypeName name="semana07.Fisio"/>
+<fullyQualifiedTypeName name="semana07.Animal"/>
+<fullyQualifiedTypeName name="semana07.Animale"/>
+<fullyQualifiedTypeName name="semana07.Funcionario"/>
 </qualifiedTypeNameHistroy>
