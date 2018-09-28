@@ -6,6 +6,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+import javax.swing.JOptionPane;
+
 public class BD {
 	
 	public Connection connection;
@@ -69,10 +71,12 @@ public class BD {
 		
 		bd.getConnection();
 		
+		String s = JOptionPane.showInputDialog("Nome?");
+		
 		try {
-			String sql = "select * from cidade";
+			String sql = "select * from cidade where nome like ?";
 			bd.preparedStatement = bd.connection.prepareStatement(sql);
-			
+			bd.preparedStatement.setString(1, s+"%");
 			bd.resultSet = bd.preparedStatement.executeQuery();
 			
 			int i = 1;
