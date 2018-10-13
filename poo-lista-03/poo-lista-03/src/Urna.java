@@ -1,9 +1,16 @@
 
-public class Urna {
+public class Urna extends Ui{
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	public static void main(String[] args) {
 		
 		//Gerador de Partido
+		
+		Ui.startUI();
 		
 		int[] codigoPartido = {
 				1 , 
@@ -93,9 +100,10 @@ public class Urna {
 				Candidato.procuraCandidato(candidatos, 51), 
 				Candidato.procuraCandidato(candidatos, 61)
 		));
-		
+
 		System.out.println(e);
-				
+		
+		Ui.setResultado(e.toString());
 	}
 
 }
