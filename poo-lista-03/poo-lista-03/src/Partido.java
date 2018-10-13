@@ -29,6 +29,20 @@ public class Partido {
 		this.nome = nome;
 	}
 	
+	public static Partido procuraPartido(Partido[] partido , int codigoPartido) {
+		
+		for (int i = 0; i < partido.length; i++) {
+			if(partido[i].getCodigo() == codigoPartido) {
+				return partido[i];
+			}
+		}
+		
+		return null;
+	}
 	
+	@Override
+	public String toString() {
+		return getNome();
+	}
 	
 }
