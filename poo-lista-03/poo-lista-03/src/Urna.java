@@ -1,4 +1,7 @@
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 public class Urna extends Ui{
 	
 	/**
@@ -88,22 +91,33 @@ public class Urna extends Ui{
 			candidatos[i] = new Candidato(numeroCandidato[i], nomeCandidato[i], cargoCandidato[i], partido[i]);
 		}
 		
-		Eleitor e = new Eleitor();
-		e.setNome("Pedrinho");
-		e.setNumeroTitulo(123);
+		Ui.atualizaCandidatos(candidatos);
+	
 		
-		e.setVoto(new Votos(
-				Candidato.procuraCandidato(candidatos, 11), 
-				Candidato.procuraCandidato(candidatos, 21), 
-				Candidato.procuraCandidato(candidatos, 31), 
-				Candidato.procuraCandidato(candidatos, 41), 
-				Candidato.procuraCandidato(candidatos, 51), 
-				Candidato.procuraCandidato(candidatos, 61)
-		));
+		
+		Ui.confirmaButton.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				Eleitor eleitor = new Eleitor();
+				eleitor.setNome("Pedrinho");
+				eleitor.setNumeroTitulo(123);
+				
+				eleitor.setVoto(new Votos(
+						Candidato.procuraCandidato(candidatos, Integer.parseInt(Ui.getDeputadoEstadualIn())), 
+						Candidato.procuraCandidato(candidatos, Integer.parseInt(Ui.getDeputadoFederalIn())), 
+						Candidato.procuraCandidato(candidatos, Integer.parseInt(Ui.getSenador01In())), 
+						Candidato.procuraCandidato(candidatos, Integer.parseInt(Ui.getSenador02In())), 
+						Candidato.procuraCandidato(candidatos, Integer.parseInt(Ui.getGovernadorIn())), 
+						Candidato.procuraCandidato(candidatos, Integer.parseInt(Ui.getPresidenteIn()))
+				));
+				
+				Ui.setResultado(eleitor.toString());
+				
+			}
+		});
+		
 
-		System.out.println(e);
-		
-		Ui.setResultado(e.toString());
 	}
 
 }
