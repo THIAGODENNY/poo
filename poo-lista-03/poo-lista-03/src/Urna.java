@@ -18,7 +18,11 @@ public class Urna {
 		e.setNome("Pedrinho");
 		e.setNumeroTitulo(123);
 		
-		Votos voto = new Votos(c1);
+		e.setVoto(new Votos(c1, c1, c1, c1, c1, c1));
+		
+		System.out.println(e);
+		
+		
 				
 	}
 

@@ -23,21 +23,17 @@ public class Eleitor extends Pessoa{
 	public void setVoto(Votos voto) {
 		this.voto = voto;
 	}
-
-	public void vota(
-			Candidato deputadoEstadual, 
-			Candidato deputadoFederal,	
-			Candidato senador01, 
-			Candidato senador02, 
-			Candidato governador, 
-			Candidato presidente
-			){
-		
-		voto.setDeputadoEstadual(deputadoEstadual);
-		voto.setDeputadoFederal(deputadoFederal);
-		voto.setSenador01(senador01);
-		voto.setSenador02(senador02);
-		voto.setGovernador(governador);
-		voto.setPresidente(presidente);
+	
+	@Override
+	public String toString() {
+		return(	
+				"Deputado Estadual: " + voto.getDeputadoEstadual() +
+				"Deputado Federal: " + voto.getDeputadoFederal() +
+				"Senador 01: " + voto.getSenador01() +
+				"Senador 02: " + voto.getSenador02() +
+				"Governador: " + voto.getGovernador() +
+				"Presidente: " + voto.getPresidente()
+				);
 	}
+
 }

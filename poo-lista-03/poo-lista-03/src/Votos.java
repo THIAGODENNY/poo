@@ -9,8 +9,21 @@ public class Votos {
 	private Candidato governador;
 	private Candidato presidente;
 
-	public Votos(Candidato deputadoEstadual) {
+	public Votos(
+			Candidato deputadoEstadual,
+			Candidato deputadoFederal,
+			Candidato senador01,
+			Candidato senador02,
+			Candidato governador,
+			Candidato presidente
+			){
+		
 		setDeputadoEstadual(deputadoEstadual);
+		setDeputadoFederal(deputadoFederal);
+		setSenador01(senador01);
+		setSenador02(senador02);
+		setGovernador(governador);
+		setPresidente(presidente);		
 	}
 	
 	protected int getNumero() {

@@ -24,4 +24,9 @@ public class Candidato extends Pessoa{
 		this.cargo = cargo;
 	}
 	
+	@Override
+	public String toString() {
+		return this.getNome();
+	}
+	
 }
