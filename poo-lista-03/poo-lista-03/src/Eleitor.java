@@ -32,12 +32,12 @@ public class Eleitor extends Pessoa {
 	@Override
 	public String toString() {
 		return (
-				"Deputado Estadual: " + voto.getDeputadoEstadual() + "\n" + 
-				"Deputado Federal: " + voto.getDeputadoFederal() + "\n" +
-				"Senador 01: " + voto.getSenador01() + "\n" +
-				"Senador 02: " + voto.getSenador02() + "\n" +
-				"Governador: " + voto.getGovernador() + "\n" +
-				"Presidente: " + voto.getPresidente()
+				"Deputado Estadual: " + voto.getDeputadoEstadual() + " Partido: " + voto.getDeputadoEstadual().getPartido() + "\n" +
+				"Deputado Federal: " + voto.getDeputadoFederal() + " Partido: " + voto.getDeputadoFederal().getPartido() + "\n" + 
+				"Senador 01: " + voto.getSenador01() + " Partido: " + voto.getSenador01().getPartido() + "\n" +
+				"Senador 02: " + voto.getSenador02() + " Partido: " + voto.getSenador02().getPartido() + "\n" +
+				"Governador: " + voto.getGovernador() + " Partido: " + voto.getGovernador().getPartido() + "\n" +
+				"Presidente: " + voto.getPresidente()  + " Partido: " + voto.getPresidente().getPartido()
 		);
 	}
 
